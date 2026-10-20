@@ -55,3 +55,4 @@ enemy classes in `lib/game/components/enemy.dart` / `boss.dart`.
 - Online leaderboard (Firebase / Supabase) using `StorageService.submitScore`
 - Ship upgrades / currency shop persisted via `shared_preferences`
 - Gamepad support, localisation, achievements
+- 
