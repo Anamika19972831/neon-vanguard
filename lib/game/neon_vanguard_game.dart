@@ -132,7 +132,14 @@ class NeonVanguardGame extends FlameGame
   void onPlayerDestroyed(Vector2 at) {
     if (!isPlaying) return;
     status = GameStatus.gameOver;
-    spawn(ExplosionFx(position: at.clone(), color: Palette.cyan, count: 90, speed: 380, size: 4.5, life: 1.1, ring: true));
+    spawn(ExplosionFx(
+        position: at.clone(),
+        color: Palette.cyan,
+        count: 90,
+        speed: 380,
+        size: 4.5,
+        life: 1.1,
+        ring: true));
     shake(20);
     vibrate(heavy: true);
     audio.play('explosion.wav');
@@ -259,7 +266,8 @@ class NeonVanguardGame extends FlameGame
     }
     player?.keyDir.setFrom(dir);
 
-    if (event is KeyDownEvent && event.logicalKey == LogicalKeyboardKey.escape) {
+    if (event is KeyDownEvent &&
+        event.logicalKey == LogicalKeyboardKey.escape) {
       if (isPlaying) {
         pauseGame();
       } else if (status == GameStatus.paused) {
